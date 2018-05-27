@@ -1,0 +1,44 @@
+<body class="hold-transition login-page">
+<% provide(:title, "Log in") %>
+<div class="login-box">
+  <div class="login-logo">
+    <b>GSOEF-</b>FP</a>
+  </div>
+  <!-- /.login-logo -->
+  <div class="login-box-body">
+    <p class="login-box-msg">WEB-Based Requisition Monitoring for General Services Office – Facilities and Equipment </p>
+
+	<% provide(:title, "Log in") %>
+
+
+    <%= form_for(:session, url: login_path) do |f| %>
+	 <div class="form-group has-feedback">
+      <%= f.label :username %>
+      <%= f.text_field :username, class: 'form-control' %>
+	  <span class="fa fa-user form-control-feedback"></span>
+	</div>
+	 <div class="form-group has-feedback">
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control' %>
+	 <span class="fa fa-lock form-control-feedback"></span>
+	</div>  
+      <div class="row">
+        <div class="col-xs-8">
+          <div class="checkbox icheck">
+            <label>
+             </label>
+          </div>
+        </div>
+        <!-- /.col -->
+        <div class="col-xs-4">
+			<br/>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= f.submit "Log in", class: "btn btn-primary" %>
+   <% end %>
+		</div>
+        <!-- /.col -->
+      </div>
+  <!-- /.login-box-body -->
+</div>
+</div>
+</body>
+<!-- /.login-box -->
